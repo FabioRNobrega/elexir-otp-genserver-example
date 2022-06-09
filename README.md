@@ -7,6 +7,8 @@ I use:
 - Erlang/OTP 24
 - IEx 1.13.4 (compiled with Erlang/OTP 22)
 
+The ZipCode was found on [Census.org](https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html)
+
 Table of contents
 =================
 
