@@ -18,9 +18,21 @@ Table of contents
   * [Git Guideline](#git-guideline)
 
 ## Install
+For run this application you need to have erlang and Elixir installed. You can fallow the [ElixirSchool](https://elixirschool.com/en/lessons/basics/basics#installing-elixir-1) tutorial to help you with that.  
 
 ## Usage
+Clone this repo and cd into and run
 
+```bash 
+iex -S mix
+```
+
+After compile with the command above you will be able to access ao functions to calculate position base em two zipCodes from USA. 
+For example the distance between Minneapolis, MN ZipCode 55401 to Austin, TX ZipCode78703 run. 
+
+```bash
+ElhexDelivery.PostalCode.Navigator.get_distance(55401, 78703)
+```
 ## Tests
 
 The tests are made using [ExUnit]() and can be found on the test folder. To run use

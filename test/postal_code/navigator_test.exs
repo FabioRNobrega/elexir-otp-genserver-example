@@ -33,7 +33,7 @@ defmodule ElhexDelivery.PostalCode.NavigatorTest do
       # San Francisco, CA 94104
       # Driving distance ~ 40 miles
       distance = Navigator.get_distance(94062, 94104)
-      # IO.puts "RWC -> SF: #{distance}"
+      # git IO.puts "RWC -> SF: #{distance}"
       assert distance == 26.27
     end
     test "distance_between_sf_and_nyc" do
