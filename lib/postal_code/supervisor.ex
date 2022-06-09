@@ -1,7 +1,7 @@
 defmodule ElhexDelivery.PostalCode.Supervisor do
   use Supervisor
 
-  alias ElhexDelivery.PostalCode.Store
+  alias ElhexDelivery.PostalCode.{Store, Navigator}
 
   def start_link do
     Supervisor.start_link(__MODULE__, [])
@@ -10,7 +10,8 @@ defmodule ElhexDelivery.PostalCode.Supervisor do
   @impl true
   def init(_) do
     children = [
-      worker(Store, [])
+      worker(Store, []),
+      worker(Navigator, [])
     ]
 
     supervise(children, strategy: :one_for_one)
