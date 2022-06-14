@@ -48,6 +48,7 @@ Create your branches and commits using the English language and following this g
 - Feature:  `feat/branch-name`
 - Hotfix: `hotfix/branch-name`
 - POC: `poc/branch-name`
+- Example: `example/branch-name`
 
 #### Commits prefix
 - Chore: `chore(context): message`
