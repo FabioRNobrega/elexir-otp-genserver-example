@@ -7,9 +7,12 @@ defmodule ElhexDelivery.Supervisor do
 
   def init(_) do
     children = [
-      supervisor(ElhexDelivery.PostalCode.Supervisor, [])
+      %{
+        id: ElhexDelivery.PostalCode.Supervisor,
+        start: { ElhexDelivery.PostalCode.Supervisor, :start_link, []}
+      }
     ]
 
-    supervise(children, strategy: :one_for_all)
+    Supervisor.init(children, strategy: :one_for_one)
   end
 end

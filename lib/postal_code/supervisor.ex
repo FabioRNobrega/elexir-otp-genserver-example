@@ -7,14 +7,21 @@ defmodule ElhexDelivery.PostalCode.Supervisor do
     Supervisor.start_link(__MODULE__, [])
   end
 
-  @impl true
   def init(_) do
     children = [
-      worker(Store, []),
-      worker(Navigator, []),
-      worker(Cache, [])
+      %{
+        id: Store,
+        start: { Store, :start_link, []}
+      },
+      %{
+        id: Navigator,
+        start: { Navigator, :start_link, []}
+      },
+      %{
+        id: Cache,
+        start: { Cache, :start_link, []}
+      }
     ]
-
-    supervise(children, strategy: :one_for_one)
+    Supervisor.init(children, strategy: :one_for_one)
   end
 end

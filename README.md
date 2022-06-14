@@ -1,6 +1,10 @@
 # ElhexDelivery| Farno
 
-This is one code example is a study about elixir OTP application using GenServe and Supervisors. Fallowing a YouTube class made by [omgneering](https://www.youtube.com/c/omgneering). More info see the official [GenServer DOC](https://hexdocs.pm/elixir/1.12/GenServer.html) and [Supervisor DOC](https://hexdocs.pm/elixir/1.12/Supervisor.html)
+One code example is a study about elixir OTP applications using GenServe and Supervisors. Following a YouTube class made by [omgneering](https://www.youtube.com/c/omgneering). For more info see the official [GenServer DOC](https://hexdocs.pm/elixir/1.12/GenServer.html) and [Supervisor DOC](https://hexdocs.pm/elixir/1.12/Supervisor.html).
+
+> OBS: 
+> The original tutorial has some deprecated implementation, so i refactor the new way of using supervisors. You can find the old way at
+> `example/deprecated-supervisor-implementation` branch and the new way at the master branch. 
 
 
 I use:
@@ -48,6 +52,7 @@ Create your branches and commits using the English language and following this g
 - Feature:  `feat/branch-name`
 - Hotfix: `hotfix/branch-name`
 - POC: `poc/branch-name`
+- Example `example/branch-name`
 
 #### Commits prefix
 - Chore: `chore(context): message`
