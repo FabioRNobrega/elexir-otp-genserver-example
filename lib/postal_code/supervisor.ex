@@ -3,8 +3,8 @@ defmodule ElhexDelivery.PostalCode.Supervisor do
 
   alias ElhexDelivery.PostalCode.{Store, Navigator, Cache}
 
-  def start_link do
-    Supervisor.start_link(__MODULE__, [])
+  def start_link(init_arg) do
+    Supervisor.start_link(__MODULE__, init_arg, name: __MODULE__)
   end
 
   def init(_) do
