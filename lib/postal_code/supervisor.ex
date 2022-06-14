@@ -11,15 +11,21 @@ defmodule ElhexDelivery.PostalCode.Supervisor do
     children = [
       %{
         id: Store,
-        start: { Store, :start_link, []}
+        start: { Store, :start_link, []},
+        shutdown: :infinity,
+        type: :supervisor
       },
       %{
         id: Navigator,
-        start: { Navigator, :start_link, []}
+        start: { Navigator, :start_link, []},
+        shutdown: :infinity,
+        type: :supervisor
       },
       %{
         id: Cache,
-        start: { Cache, :start_link, []}
+        start: { Cache, :start_link, []},
+        shutdown: :infinity,
+        type: :supervisor
       }
     ]
     Supervisor.init(children, strategy: :one_for_one)

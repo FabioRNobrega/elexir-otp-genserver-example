@@ -9,7 +9,9 @@ defmodule ElhexDelivery.Supervisor do
     children = [
       %{
         id: ElhexDelivery.PostalCode.Supervisor,
-        start: { ElhexDelivery.PostalCode.Supervisor, :start_link, []}
+        start: { ElhexDelivery.PostalCode.Supervisor, :start_link, []},
+        shutdown: :infinity,
+        type: :supervisor
       }
     ]
 
